@@ -6,7 +6,7 @@ var express = require('express'),
 var port = 8080;
 
 app.listen(port, function () {
-    console.log('Server running on http://%s:%s', ip, port);
+    console.log('Server running on %s', process.domain);
 });
 
 app.get('/', function(request, response) {
@@ -17,5 +17,3 @@ app.get('/main', function(request, response) {
     fs.createReadStream('./views/index.html').pipe(response);
 });
 
-
-console.log('Server running on http://%s:%s', ip, port);
