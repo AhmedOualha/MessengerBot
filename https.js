@@ -15,3 +15,7 @@ require('greenlock-express').create({
   })
 
 }).listen(80, 443);
+
+app.get('/', function(request, response) {
+    fs.createReadStream('./views/server.html').pipe(response);
+});
