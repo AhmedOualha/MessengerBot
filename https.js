@@ -46,6 +46,7 @@ require('http').createServer(lex.middleware(require('redirect-https')())).listen
 
 
 app.use('/', function(request, response) {
+    console.log(request.baseUrl);
     fs.createReadStream('./views/server.html').pipe(response);
 });
 
