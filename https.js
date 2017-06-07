@@ -1,5 +1,9 @@
 'use strict';
 
+var express = require('express'),
+    fs = require('fs'),
+    app     = express();
+
 require('greenlock-express').create({
 
   server: 'staging'
