@@ -3,7 +3,7 @@ var express = require('express'),
     fs = require('fs'),
     app     = express();
     
-var port = 80;
+var port = 8080;
 
 app.listen(port, function () {
     console.log('Server running on https://0.0.0.0:%s', port);
