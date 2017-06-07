@@ -45,10 +45,14 @@ require('http').createServer(lex.middleware(require('redirect-https')())).listen
 });
 
 
-app.use('/main', function(request, response) {
-    console.log("Teeeeest main!");
+app.get('/', function(request, response) {
+    fs.createReadStream('./views/server.html').pipe(response);
+});
+
+app.get('/main', function(request, response) {
     fs.createReadStream('./views/index.html').pipe(response);
 });
+
 
 
 // handles your app
