@@ -4,11 +4,11 @@ require('greenlock-express').create({
 
   server: 'staging'
 
-, email: 'john.doe@example.com'
+, email: 'ahmedoualha@ymail.com'
 
 , agreeTos: true
 
-, approveDomains: [ 'example.com' ]
+, approveDomains: [ 'testandlearn.net' ]
 
 , app: require('express')().use('/', function (req, res) {
     res.end('Hello, World!');
