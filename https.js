@@ -1,9 +1,17 @@
-var https = require('https');
+'use strict';
 
-https.get('/', function(res) {
-   console.log('statusCode: ', res.statusCode);
+require('greenlock-express').create({
 
-   res.on('data', function(d) {
-      process.stdout.write(d);
-   });
-});
+  server: 'staging'
+
+, email: 'john.doe@example.com'
+
+, agreeTos: true
+
+, approveDomains: [ 'example.com' ]
+
+, app: require('express')().use('/', function (req, res) {
+    res.end('Hello, World!');
+  })
+
+}).listen(80, 443);
