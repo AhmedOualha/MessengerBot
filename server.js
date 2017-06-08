@@ -17,10 +17,6 @@ app.get('/main', function(request, response) {
     fs.createReadStream('./views/index.html').pipe(response);
 });
 
-app.get('/.well-known/acme-challenge/lDqt9z1MkJqQr-lb5l3gd0IE1HrfEvC81on290LkC1Q', function(request, response) {
-    fs.createReadStream('./.well-known/acme-challenge/lDqt9z1MkJqQr-lb5l3gd0IE1HrfEvC81on290LkC1Q').pipe(response);
-});
-
-app.get('/.well-known/acme-challenge/ZdRobrw-KRYnJrGH6VDVzFB9Lfb0FKgbbgZoQ1IdF2w', function(request, response) {
-    fs.createReadStream('./.well-known/acme-challenge/ZdRobrw-KRYnJrGH6VDVzFB9Lfb0FKgbbgZoQ1IdF2w').pipe(response);
+app.get('/.well-known/acme-challenge/VVpPX8fSHJiTJmiOzaMgxWxlESTeVm50MiKGTvVYhtg', function(request, response) {
+    fs.createReadStream('./.well-known/acme-challenge/VVpPX8fSHJiTJmiOzaMgxWxlESTeVm50MiKGTvVYhtg').pipe(response);
 });
